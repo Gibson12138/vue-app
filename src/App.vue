@@ -11,9 +11,19 @@
 
 <script>
 import FooterGuide from './components/FooterGuide/FooterGuide'
+// import { reqFoodList } from './api/index'
+
 export default {
+  mounted(){
+    this.$store.dispatch('getAddress')
+  },
   components: {
     FooterGuide
-  }
+  },
+  // async mounted(){
+  //   const reqFoodLists = await reqFoodList();
+  //   console.log(reqFoodLists);
+  // }
+
 }
 </script>
